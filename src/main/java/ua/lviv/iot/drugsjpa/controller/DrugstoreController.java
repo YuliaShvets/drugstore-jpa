@@ -38,6 +38,11 @@ public class DrugstoreController {
         return drugstoreDtoAssembler.toModel(drugstore);
     }
 
+    @PostMapping("/newdb")
+    public void createDB() {
+        drugstoreService.createDB();
+    }
+
     @PostMapping("/procedure/{name}")
     public void createTenDrugstores(@PathVariable String name){
         drugstoreService.createTenDrugstores(name);

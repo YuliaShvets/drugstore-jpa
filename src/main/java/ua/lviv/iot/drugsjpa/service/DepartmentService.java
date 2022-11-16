@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 import ua.lviv.iot.drugsjpa.domain.Department;
 
 public interface DepartmentService extends ServiceTemplate<Department, Integer> {
-    void createDB();
 }

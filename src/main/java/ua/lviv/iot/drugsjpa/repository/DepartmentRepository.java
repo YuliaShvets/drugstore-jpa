@@ -6,7 +6,4 @@ import org.springframework.stereotype.Repository;
 import ua.lviv.iot.drugsjpa.domain.Department;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department,Integer> {
-
-    @Procedure("add_new_db")
-    void createDB();
 }

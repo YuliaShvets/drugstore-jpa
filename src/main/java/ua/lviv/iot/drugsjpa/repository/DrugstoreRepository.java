@@ -10,4 +10,7 @@ public interface DrugstoreRepository  extends JpaRepository<Drugstore, Integer> 
 
     @Procedure("add_ten_drugstores")
     void createTenDrugstores(String name);
+
+    @Procedure("add_new_db")
+    void createDB();
 }

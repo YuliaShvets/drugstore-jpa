@@ -53,4 +53,9 @@ public class DrugstoreServiceImpl implements DrugstoreService {
     public void createTenDrugstores(String name) {
         drugstoreRepository.createTenDrugstores(name);
     }
+
+    @Override
+    public void createDB() {
+        drugstoreRepository.createDB();
+    }
 }

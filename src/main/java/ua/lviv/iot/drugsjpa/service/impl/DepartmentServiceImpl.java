@@ -51,8 +51,4 @@ public class DepartmentServiceImpl implements DepartmentService {
         departmentRepository.delete(department);
     }
 
-    @Override
-    public void createDB() {
-        departmentRepository.createDB();
-    }
 }
