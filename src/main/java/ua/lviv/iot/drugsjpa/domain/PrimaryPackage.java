@@ -15,7 +15,12 @@ public class PrimaryPackage {
     @Id
     @Column(name = "id")
     private Integer id;
-    private String typePackaging;
-    private Integer drugId;
-}
 
+    @Basic
+    @Column(name = "type_packaging")
+    private String typePackaging;
+
+    @ManyToOne
+    @JoinColumn(name = "drug_id", referencedColumnName = "id")
+    private Drug drugId;
+}

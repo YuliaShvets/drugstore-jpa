@@ -38,6 +38,12 @@ public class DepartmentController {
         return departmentDtoAssembler.toModel(department);
     }
 
+    @PostMapping("/newdb")
+    public void createDB() {
+        departmentService.createDB();
+    }
+
+
     @PutMapping("/{id}")
     public DepartmentDto update(@PathVariable Integer id, @RequestBody Department entity) {
         Department department = departmentService.update(id, entity);

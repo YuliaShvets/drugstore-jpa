@@ -38,6 +38,11 @@ public class DrugstoreController {
         return drugstoreDtoAssembler.toModel(drugstore);
     }
 
+    @PostMapping("/procedure/{name}")
+    public void createTenDrugstores(@PathVariable String name){
+        drugstoreService.createTenDrugstores(name);
+    }
+
     @PutMapping("/{id}")
     public DrugstoreDto update(@PathVariable Integer id, @RequestBody Drugstore entity) {
         Drugstore drugstore = drugstoreService.update(id, entity);

@@ -6,12 +6,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import ua.lviv.iot.drugsjpa.domain.Country;
 import ua.lviv.iot.drugsjpa.repository.CountryRepository;
+import ua.lviv.iot.drugsjpa.service.CountryService;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-public class CountryServiceImpl {
+public class CountryServiceImpl implements CountryService {
 
     @Autowired
     private CountryRepository countryRepository;
@@ -48,4 +49,8 @@ public class CountryServiceImpl {
         countryRepository.delete(country);
     }
 
+    @Override
+    public void createEntity(String name) {
+        countryRepository.createEntity(name);
+    }
 }

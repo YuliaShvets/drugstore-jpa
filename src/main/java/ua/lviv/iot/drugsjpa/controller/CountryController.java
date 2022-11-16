@@ -15,6 +15,7 @@ import java.util.List;
 
 public class CountryController {
 
+    @Autowired
     private CountryService countryService;
 
     @Autowired
@@ -36,6 +37,11 @@ public class CountryController {
     public CountryDto create(@RequestBody Country entity) {
         Country country = countryService.create(entity);
         return countryDtoAssembler.toModel(country);
+    }
+
+    @PostMapping("/newCountry")
+    public void createEntity(String name) {
+        countryService.createEntity(name);
     }
 
     @PutMapping("/{name}")

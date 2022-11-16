@@ -25,7 +25,7 @@ public class Location {
     @JoinColumn(name = "department_id", referencedColumnName = "id")
     private Department departmentId;
 
-//    @ManyToOne
-//    @JoinColumn(name="city_id", referencedColumnName = "id")
-//    private City cityId;
+    @ManyToOne
+    @JoinColumn(name = "city_id", referencedColumnName = "id")
+    private City cityId;
 }

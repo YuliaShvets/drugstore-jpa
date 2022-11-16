@@ -24,5 +24,7 @@ public class CategoryOfDrug {
     @Column(name = "type")
     private String type;
 
-    private Integer drugId;
+    @ManyToOne
+    @JoinColumn(name = "drug_id", referencedColumnName = "id")
+    private Drug drugId;
 }

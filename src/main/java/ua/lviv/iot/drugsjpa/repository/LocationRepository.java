@@ -1,4 +1,11 @@
 package ua.lviv.iot.drugsjpa.repository;
 
-public interface LocatiomRepository {
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import ua.lviv.iot.drugsjpa.domain.Location;
+
+@Repository
+public interface LocationRepository extends JpaRepository<Location, Integer> {
+
 }

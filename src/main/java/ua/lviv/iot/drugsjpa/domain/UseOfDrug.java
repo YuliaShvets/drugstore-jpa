@@ -15,6 +15,12 @@ public class UseOfDrug {
     @Id
     @Column(name = "id")
     private Integer id;
+
+    @Basic
+    @Column(name = "use_type")
     private String useType;
-    private Integer drugId;
+
+    @ManyToOne
+    @JoinColumn(name = "drug_id", referencedColumnName = "id")
+    private Drug drugId;
 }

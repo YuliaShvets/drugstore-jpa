@@ -49,4 +49,8 @@ public class DrugstoreServiceImpl implements DrugstoreService {
         drugstoreRepository.delete(drugstore);
     }
 
+    @Override
+    public void createTenDrugstores(String name) {
+        drugstoreRepository.createTenDrugstores(name);
+    }
 }

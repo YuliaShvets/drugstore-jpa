@@ -15,6 +15,12 @@ public class CompositionOfDrug {
     @Id
     @Column(name = "id")
     private Integer id;
+
+    @Basic
+    @Column(name = "active_ingredients")
     private String activeIngredients;
-    private Integer drugId;
+
+    @OneToOne
+    @JoinColumn(name = "drug_id", referencedColumnName = "id")
+    private Drug drugId;
 }

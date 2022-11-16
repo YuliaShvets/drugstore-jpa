@@ -33,7 +33,12 @@ public class Drug {
     @Column(name = "price_in_dollars")
     private double priceInDollars;
 
-    private Integer producerId;
-    private Integer drugstoreId;
+    @ManyToOne
+    @JoinColumn(name = "producer_id", referencedColumnName = "id")
+    private Producer producerId;
+
+    @ManyToOne
+    @JoinColumn(name = "drugstore_id", referencedColumnName = "id")
+    private Drugstore drugstoreId;
 
 }

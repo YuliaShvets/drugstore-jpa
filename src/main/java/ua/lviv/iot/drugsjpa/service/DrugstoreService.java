@@ -5,4 +5,6 @@ import org.springframework.stereotype.Repository;
 import ua.lviv.iot.drugsjpa.domain.Drugstore;
 
 public interface DrugstoreService extends ServiceTemplate<Drugstore, Integer>{
+
+    void createTenDrugstores(String name);
 }
